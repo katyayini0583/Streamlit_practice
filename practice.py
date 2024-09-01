@@ -12,3 +12,7 @@ if st.button("Enter"):
 data = yf.download("SPY AAPL", period="1mo",progress=False)
 #st.write(f'{data}')
 st.dataframe(data)
+
+ticker = yf.Ticker('AAPL')
+aapl_df = ticker.history(period="5y")
+aapl_df['Close'].plot(title="APPLE's stock price")
