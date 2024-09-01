@@ -6,7 +6,7 @@ import datetime
 
 st.header('Stock Trends')
 
-symbols = ['MSFT', 'GOOGL', 'AMZN', 'TSLA']
+symbols = ['NSE','MSFT', 'GOOGL', 'AMZN', 'TSLA']
 
 stock_name = st.selectbox('Select the stock',symbols)
 col1,col2 = st.columns(2)
