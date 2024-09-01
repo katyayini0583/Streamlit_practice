@@ -22,5 +22,5 @@ tickers = yf.Tickers('msft aapl goog')
 
 # access each ticker using (example)
 st.write(tickers.tickers['MSFT'].info)
-tickers.tickers['AAPL'].history(period="1mo")
+st.write(tickers.tickers['AAPL'].history(period="1mo"))
 tickers.tickers['GOOG'].actions
