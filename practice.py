@@ -14,5 +14,5 @@ data = yf.download("SPY AAPL", period="1mo",progress=False)
 st.dataframe(data)
 
 ticker = yf.Ticker('AAPL',progress=False)
-aapl_df = ticker.history(period="5y")
+aapl_df = ticker.history(period="1y")
 aapl_df['Close'].plot(title="APPLE's stock price")
