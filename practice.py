@@ -10,4 +10,5 @@ if st.button("Enter"):
     st.write(f'Hello {name}.. Welcome to MLOps Practice')
 
 data = yf.download("SPY AAPL", period="1mo")
+st.write(f'{data}')
 st.dataframe(data)
