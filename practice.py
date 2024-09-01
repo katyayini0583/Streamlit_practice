@@ -12,4 +12,6 @@ if st.button("Enter"):
 data = yf.download("AAPL", period="1mo",progress=False)
 #st.write(f'{data}')
 st.dataframe(data)
-data['Close'].plot(Title='Apple stocks close chart')
+#data['Close'].plot(Title='Apple stocks close chart')
+
+st.line_chart(data['Close'])
