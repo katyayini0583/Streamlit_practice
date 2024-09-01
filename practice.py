@@ -19,4 +19,5 @@ data = yf.download("AAPL",progress=False,start=start_date,end=end_date)
 #data['Close'].plot(Title='Apple stocks close chart')
 
 st.subheader(f'Apple stocks closing trend between {start_date} and {end_date}')
-st.line_chart(data['Close'])
+if st.button("Get Chart"):
+    st.line_chart(data['Close'])
