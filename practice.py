@@ -9,10 +9,10 @@ name = st.text_input("May I know your name")
 if st.button("Enter"):
     st.write(f'Hello {name}.. Welcome to MLOps Practice')
 
-data = yf.download("SPY AAPL", period="1mo",progress=False)
-#st.write(f'{data}')
+data = yf.download("AAPL", period="1mo",progress=False)
+st.write(f'{data}')
 st.dataframe(data)
-
+'''
 #ticker = yf.Ticker('AAPL',progress=False)
 #aapl_df = ticker.history(period="1y")
 #aapl_df['Close'].plot(title="APPLE's stock price")
@@ -26,3 +26,5 @@ tickers.tickers['AAPL'].history(period="1mo")
 #df = tickers.tickers['AAPL'].history(period="1mo",progress=False)
 #df['close'].plot(title="APPLE's stock price")
 tickers.tickers['GOOG'].actions
+
+'''
