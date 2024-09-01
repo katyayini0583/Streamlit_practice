@@ -15,7 +15,8 @@ end_date = st.date_input("Choose end date", datetime.date(2019, 7, 6))
 
 data = yf.download("AAPL",progress=False,start=start_date,end=end_date)
 #st.write(f'{data}')
-st.dataframe(data)
+#st.dataframe(data)
 #data['Close'].plot(Title='Apple stocks close chart')
 
+st.subheader(f'Apple stocks closing trend between {start_date} and {end_date}')
 st.line_chart(data['Close'])
