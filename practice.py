@@ -13,14 +13,14 @@ data = yf.download("SPY AAPL", period="1mo",progress=False)
 #st.write(f'{data}')
 st.dataframe(data)
 
-ticker = yf.Ticker('AAPL',progress=False)
-aapl_df = ticker.history(period="1y")
-aapl_df['Close'].plot(title="APPLE's stock price")
+#ticker = yf.Ticker('AAPL',progress=False)
+#aapl_df = ticker.history(period="1y")
+#aapl_df['Close'].plot(title="APPLE's stock price")
 
 
 tickers = yf.Tickers('msft aapl goog')
 
 # access each ticker using (example)
-tickers.tickers['MSFT'].info
+st.write(tickers.tickers['MSFT'].info)
 tickers.tickers['AAPL'].history(period="1mo")
 tickers.tickers['GOOG'].actions
