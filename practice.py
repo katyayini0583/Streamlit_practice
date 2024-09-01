@@ -4,14 +4,14 @@ import streamlit as st
 import yfinance as yf
 import datetime
 
-st.header('MLOps Deployment Practice')
-name = st.text_input("May I know your name")
+st.header('Stock Trends')
 
-if st.button("Enter"):
-    st.write(f'Hello {name}.. Welcome to MLOps Practice')
+symbols = ['MSFT', 'GOOGL', 'AMZN', 'TSLA']
 
-start_date = st.date_input("Choose start date", datetime.date(2019, 7, 6))
-end_date = st.date_input("Choose end date", datetime.date(2019, 7, 6))
+st.selectbox('Select the stock',symbols)
+col1,col2 = st.columns(2)
+start_date = col1.date_input("Choose start date", datetime.date(2019, 7, 6))
+end_date = col2.date_input("Choose end date", datetime.date(2019, 7, 6))
 
 data = yf.download("AAPL",progress=False,start=start_date,end=end_date)
 #st.write(f'{data}')
