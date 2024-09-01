@@ -12,3 +12,4 @@ if st.button("Enter"):
 data = yf.download("AAPL", period="1mo",progress=False)
 #st.write(f'{data}')
 st.dataframe(data)
+data['close'].plot(Title='Apple stocks close chart')
